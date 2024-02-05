@@ -107,7 +107,7 @@ def get_context_retriever_chain(vector_store):
 
 def get_conversational_rag_chain(retriever_chain):
 
-    llm = ChatOpenAI()
+    llm = ChatOpenAI(model_name="gpt-4-0125-preview")
 
     prompt = ChatPromptTemplate.from_messages(
         [
